@@ -1,0 +1,10 @@
+---
+
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPoolRadosNamespace
+metadata:
+  name: $RADOS_NAMESPACE
+  namespace: $NAMESPACE # namespace:cluster
+spec:
+  # blockPoolName is the name of the CephBlockPool CR where the namespace will be created.
+  blockPoolName: $RBD_POOL_NAME
